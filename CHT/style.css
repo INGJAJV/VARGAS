@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("img/3663432.jpg"); /* ../ sube desde css/ a raíz */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.grid-layout-3col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.section {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.field label {
+  flex: 1;
+  font-weight: bold;
+  color: #444;
+}
+
+.field input,
+.field select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+button {
+  padding: 14px 22px;
+  font-size: 16px;
+  background-color: #0057d9;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0041b0;
+}
+
+.resultado {
+  background: #e9f5ff;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: monospace;
+  color: #00416d;
+  white-space: pre-line;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+canvas {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: 400px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora Avanzada de Fuerza Eléctrica entre Cargas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Calculadora Avanzada de Fuerza Eléctrica entre Cargas</h1>
+
+    <div class="grid-layout-3col">
+      <!-- COLUMNA 1: Entradas -->
+      <div>
+        <div class="section">
+          <h2>Valores de Carga</h2>
+          <div class="field-group">
+            <div class="field">
+              <label for="q1">q₁</label>
+              <input type="number" id="q1" value="2" step="any" />
+              <select id="unit1">
+                <option value="nano">nC</option>
+                <option value="micro" selected>μC</option>
+                <option value="mili">mC</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="q2">q₂</label>
+              <input type="number" id="q2" value="-4" step="any" />
+              <select id="unit2">
+                <option value="nano">nC</option>
+                <option value="micro" selected>μC</option>
+                <option value="mili">mC</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="q3">q₃</label>
+              <input type="number" id="q3" value="7" step="any" />
+              <select id="unit3">
+                <option value="nano">nC</option>
+                <option value="micro" selected>μC</option>
+                <option value="mili">mC</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Distancias entre cargas (m)</h2>
+          <div class="field-group">
+            <div class="field">
+              <label for="r12">r₁₂</label>
+              <input type="number" id="r12" value="0.5" min="0.001" step="any" />
+            </div>
+            <div class="field">
+              <label for="r13">r₁₃</label>
+              <input type="number" id="r13" value="0.5" min="0.001" step="any" />
+            </div>
+            <div class="field">
+              <label for="r23">r₂₃</label>
+              <input type="number" id="r23" value="0.5" min="0.001" step="any" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA 2: Ángulos y selección -->
+      <div>
+        <div class="section">
+          <div id="mensajeAngulos" style="color:red; font-weight:bold; margin-top:5px;"></div>
+
+          <h2>Ángulos del triángulo (°)</h2>
+          <div class="field-group">
+            <div class="field">
+              <label for="angleA">Ángulo A</label>
+              <input type="number" id="angleA" value="60" min="0" max="180" step="any" readonly />
+            </div>
+            <div class="field">
+              <label for="angleB">Ángulo B</label>
+              <input type="number" id="angleB" value="60" min="0" max="180" step="any" readonly />
+            </div>
+            <div class="field">
+              <label for="angleC">Ángulo C</label>
+              <input type="number" id="angleC" value="60" min="0" max="180" step="any" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Fuerza a Calcular</h2>
+          <div class="field">
+            <label for="target">Fuerza</label>
+            <select id="target">
+              <option value="F13">F₁₃</option>
+              <option value="F23">F₂₃</option>
+              <option value="F12">F₁₂</option>
+              <option value="Fnet3" selected>Fuerza neta sobre q₃</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="btnCalcular">Calcular Fuerza</button>
+
+      </div>
+
+      <!-- COLUMNA 3: Canvas y Resultados -->
+      <div>
+        <div class="section">
+          <canvas id="canvas" width="450" height="450"></canvas>
+        </div>
+        <div class="section resultado" id="resultado">
+          <!-- Resultado aparece aquí -->
+        </div>
+        <div id="explicacionSignos" class="cuadro-explicacion">
+          <!-- Aquí aparecerá la explicación de signos y tipo de fuerza -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
